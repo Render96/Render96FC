@@ -12,13 +12,17 @@ from u8util import main_font_lut
 from pathlib import Path
 import os 
 
+if len(sys.argv) < 3:
+    print("Usage: r96fc.py {Font-Name} {Font-Size} [Font-Size-Multiplier]") 
+
 fontpath = sys.argv[1]
 fontpoint = int(sys.argv[2])
+fontmul = float(sys.argv[3]) if len(sys.argv) > 3 else 1
 
 for i in range(0, 10000):
     image = Image.new('RGBA', [fontpoint * 2, fontpoint * 2])
     draw = ImageDraw.Draw(image)
-    font = ImageFont.truetype(fontpath, fontpoint)    
+    font = ImageFont.truetype(fontpath, round(fontpoint * fontmul))    
     ch = getCharID(chr(i))
     if ch != None and main_font_lut[ch] != 0x0:
         path = f"Render96font/gfx/{main_font_lut[ch]}.png"
