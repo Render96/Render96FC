@@ -1,3 +1,4 @@
+# coding=utf-8
 texture_font_char_us_0= "textures/segment2/font_graphics.05900.ia4"
 texture_font_char_us_1= "textures/segment2/font_graphics.05940.ia4"
 texture_font_char_us_2= "textures/segment2/font_graphics.05980.ia4"
@@ -375,22 +376,22 @@ charmap = {
     "Ç": [0xED, None],
     "ç": [0xEE, None],
     "„": [0xF0, None],
-    f"{chr(225)}": [112, None],
-    f"{chr(233)}": [113, None],
-    f"{chr(237)}": [114, None],
-    f"{chr(243)}": [115, None],
-    f"{chr(250)}": [116, None],
-    f"{chr(193)}": [117, None],
-    f"{chr(201)}": [118, None],
-    f"{chr(205)}": [119, None],
-    f"{chr(211)}": [120, None],
-    f"{chr(218)}": [121, None],
-    f"{chr(241)}": [122, None],
-    f"{chr(209)}": [123, None],
-    f"{chr(252)}": [124, None],
-    f"{chr(220)}": [125, None],
-    f"{chr(191)}": [126, None],
-    f"{chr(161)}": [127, None],
+    chr(225): [112, None],
+    chr(233): [113, None],
+    chr(237): [114, None],
+    chr(243): [115, None],
+    chr(250): [116, None],
+    chr(193): [117, None],
+    chr(201): [118, None],
+    chr(205): [119, None],
+    chr(211): [120, None],
+    chr(218): [121, None],
+    chr(241): [122, None],
+    chr(209): [123, None],
+    chr(252): [124, None],
+    chr(220): [125, None],
+    chr(191): [126, None],
+    chr(161): [127, None],
 }
 
 def getCharID(txt):
